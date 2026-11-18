@@ -3,33 +3,7 @@
 import { ADVISORS, type Advisor } from "@/lib/advisors";
 import type { NavFn } from "@/lib/nav";
 import { AdvisorCard } from "./AdvisorCard";
-import { FlowLines, type FlowSvg } from "./FlowLines";
 import { Reveal, RevealGroup } from "./Reveal";
-
-const LINES: FlowSvg[] = [
-  {
-    viewBox: "0 0 1200 700",
-    width: 52,
-    d: "M-366 597 C 150 561, 520 627, 880 585 C 1150 555, 1400 613, 1580 581",
-  },
-  {
-    viewBox: "0 0 1200 700",
-    width: 46,
-    tone: "light",
-    d: "M1580 593 C 1150 557, 760 629, 380 583 C 160 557, -80 609, -366 577",
-  },
-  {
-    viewBox: "0 0 1200 700",
-    width: 50,
-    tone: "deep",
-    d: "M-366 601 C 150 565, 560 631, 980 587 C 1210 561, 1390 615, 1580 585",
-  },
-  {
-    viewBox: "0 0 1200 700",
-    width: 48,
-    d: "M1580 597 C 1120 561, 740 629, 350 585 C 130 559, -90 611, -366 579",
-  },
-];
 
 export function DetailView({
   advisor: a,
@@ -46,7 +20,6 @@ export function DetailView({
 
   return (
     <div className="view" id="view-detail">
-      <FlowLines svgs={LINES} stack />
       <div className="wrap" id="detail-root">
         <div className="detail-hero">
           <button type="button" className="back-btn" onClick={() => onNav("list")}>
