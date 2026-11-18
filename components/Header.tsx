@@ -18,15 +18,6 @@ export function Header({ onNav }: { onNav: NavFn }) {
           <button type="button" onClick={() => onNav("top", "message")}>
             私たちの想い
           </button>
-          <button type="button" onClick={() => onNav("top", "foryou")}>
-            あなたのために
-          </button>
-          <button type="button" onClick={() => onNav("list")}>
-            アドバイザー
-          </button>
-          <button type="button" onClick={() => onNav("top", "together")}>
-            共に、見つけよう
-          </button>
         </nav>
         <button type="button" className="btn btn-orange btn-sm header-cta" onClick={() => onNav("list")}>
           アドバイザーを探す <span className="arr">→</span>
